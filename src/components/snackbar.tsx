@@ -1,0 +1,10 @@
+import { Snackbar } from 'react-native-snackbar';
+
+export const showSnackbar = (message: string) => {
+  Snackbar.show({
+    text: message,
+    duration: Snackbar.LENGTH_SHORT,
+    backgroundColor: '#000',
+    textColor: '#fff',
+  });
+};
