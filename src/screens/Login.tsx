@@ -6,6 +6,7 @@ import CustomTextField from '../components/textfeild'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import type { NativeStackScreenProps } from '@react-navigation/native-stack'
 import type { RootStackParamList } from '../navigation/types'
+import { FONT_DEFAULT,GLOBAL_HORIZANTAL_PADDING } from '../constants/Constants'
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
     globalsetting: {
         flex: 1,
         justifyContent:'center',
-        paddingHorizontal: 16,
+        paddingHorizontal: GLOBAL_HORIZANTAL_PADDING,
         backgroundColor: '#131416'
     },
     headingstyle: {
@@ -72,14 +73,14 @@ const styles = StyleSheet.create({
         fontWeight: '700',
         marginTop: 20,
         color: "#efefef",
-        fontFamily: "Inter",
+        fontFamily: FONT_DEFAULT,
     },
     nonheadingstyle: {
         fontSize: 16,
         fontWeight: '500',
         marginTop: 10,        
         color: "#efefef",
-        fontFamily: "Inter",
+        fontFamily: FONT_DEFAULT,
     },
 
 
