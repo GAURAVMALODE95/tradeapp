@@ -6,7 +6,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import { FONT_DEFAULT } from '../constants/Constants';
+import { FONT_DEFAULT, SAFE_AREA_BACKGROUND_COLOR } from '../constants/Constants';
 
 interface Props {
   title: string;
@@ -61,11 +61,11 @@ export default CustomAppBar;
 const styles = StyleSheet.create({
   
   container: {
-    backgroundColor: '#1E293B',
+    backgroundColor: SAFE_AREA_BACKGROUND_COLOR,
     flexDirection: 'row',
     alignItems: 'center',
-    color:'#1E293B',  
-    paddingVertical: 8,
+    // color:'#1E293B',  
+     paddingVertical: 8,
   },
   side: {
     width: 30,
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: '500',
     fontFamily: FONT_DEFAULT,
     color:'#FFF'
