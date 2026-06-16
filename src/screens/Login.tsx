@@ -49,7 +49,7 @@ const Login = ({ navigation }: Props) => {
                 if(!verifyform()){
                     return;
                 }
-                navigation.replace('Home');
+                navigation.replace('MainTabs');
                 }}/>
             <View style={{ height: 60 }} /> 
             

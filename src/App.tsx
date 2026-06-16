@@ -2,7 +2,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Login from './screens/Login';
-import Home from './screens/Home';
+import TabNavigator from './navigation/tabnavigator';
+
 import type { RootStackParamList } from './navigation/types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -10,16 +11,20 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
+      <Stack.Navigator
+        initialRouteName="Login"
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
         <Stack.Screen
           name="Login"
           component={Login}
-          options={{ headerShown: false }}
         />
+
         <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{ headerShown: false }}
+          name="MainTabs"
+          component={TabNavigator}
         />
       </Stack.Navigator>
     </NavigationContainer>
