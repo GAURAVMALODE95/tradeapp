@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { FONT_DEFAULT, GLOBAL_BACKGROUND_COLOR, GLOBAL_HORIZANTAL_PADDING, SAFE_AREA_BACKGROUND_COLOR } from '../constants/Constants'
 import CustomAppBar from '../components/appbar';
 import Tickers_Scroll from './home/Tickers_Scroll';
+import Index_Card from './home/Index_Card';
 
 
 const Home = () => {
@@ -19,7 +20,8 @@ const Home = () => {
         />
         
       </SafeAreaView>
-
+      <Tickers_Scroll />
+      <Index_Card />
       <View style={{ height: 60 }} /> 
         
     </View>
