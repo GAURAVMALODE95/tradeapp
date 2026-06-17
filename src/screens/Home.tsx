@@ -19,7 +19,7 @@ const Home = () => {
         />
         
       </SafeAreaView>
-      <Tickers_Scroll />
+
       <View style={{ height: 60 }} /> 
         
     </View>

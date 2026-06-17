@@ -3,6 +3,7 @@ import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import CustomAppBar from '../components/appbar'
 import { GLOBAL_BACKGROUND_COLOR, SAFE_AREA_BACKGROUND_COLOR } from '../constants/Constants'
+import Tickers_Scroll from './home/Tickers_Scroll'
 
 const Portfolio = () => {
   return (
@@ -16,6 +17,7 @@ const Portfolio = () => {
           showBack
         />
       </SafeAreaView>
+      <Tickers_Scroll />
       <View style={{ height: 60 }} /> 
         
     </View>
