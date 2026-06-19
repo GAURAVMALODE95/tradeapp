@@ -19,7 +19,7 @@ const Home = () => {
       >
         <CustomAppBar
           title="Home"
-          showBack
+          showBack={false}
         />
 
       </SafeAreaView>
