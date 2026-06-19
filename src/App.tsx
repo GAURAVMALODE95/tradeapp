@@ -5,6 +5,7 @@ import Login from './screens/Login';
 import TabNavigator from './navigation/tabnavigator';
 
 import type { RootStackParamList } from './navigation/types';
+import All_tickers_screen from './screens/home/All_tickers_screen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -20,6 +21,11 @@ const App = () => {
         <Stack.Screen
           name="Login"
           component={Login}
+        />
+        
+        <Stack.Screen
+          name="All_tickers_screen"
+          component={All_tickers_screen}
         />
 
         <Stack.Screen

@@ -1,6 +1,7 @@
 export type RootStackParamList = {
   Login: undefined;
   MainTabs: undefined;
+  All_tickers_screen: undefined;
 };
 
 declare global {
