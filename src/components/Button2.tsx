@@ -7,29 +7,26 @@ import {
   ViewStyle,
 } from 'react-native';
 
-interface CustomButtonProps {
+interface CustomButton2Props {
   title: string;
   color: string;
   onPress: () => void;
   loading?: boolean;
   disabled?: boolean;
-  fullWidth?: boolean;
 }
 
-const CustomButton = ({
+const CustomButton2 = ({
   title,
   color,
   onPress,
   loading = false,
   disabled = false,
-  fullWidth = false,
-}: CustomButtonProps) => {
+}: CustomButton2Props) => {
   return (
     <TouchableOpacity
       style={[
         styles.button,
         { backgroundColor: color } as ViewStyle,
-        fullWidth && styles.fullWidth,
         disabled && styles.disabledButton,
       ]}
       onPress={onPress}
@@ -44,23 +41,17 @@ const CustomButton = ({
   );
 };
 
-export default CustomButton;
+export default CustomButton2;
 
 const styles = StyleSheet.create({
   button: {
-    minHeight: 48,
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    borderRadius: 100,
+    minHeight: 24,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    alignSelf: 'flex-start', // content width
     marginVertical: 10,
-  },
-
-  fullWidth: {
-    width: '100%',
-    alignSelf: 'stretch',
   },
 
   disabledButton: {

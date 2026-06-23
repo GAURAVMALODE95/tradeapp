@@ -45,10 +45,10 @@ const Login = ({ navigation }: Props) => {
             <CustomTextField label='Email' value={email} onChangeText={setEmail}></CustomTextField>
             <CustomTextField label='Password' value={password} onChangeText={setPassword}></CustomTextField>
             <View style={{ height: 40 }} /> 
-            <CustomButton title="Login" color="#1E293B" onPress={() => {
-                if(!verifyform()){
-                    return;
-                }
+            <CustomButton title="Login" fullWidth color="#1E293B" onPress={() => {
+                // if(!verifyform()){
+                //     return;
+                // }
                 navigation.replace('MainTabs');
                 }}/>
             <View style={{ height: 60 }} /> 

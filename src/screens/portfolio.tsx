@@ -14,7 +14,7 @@ const Portfolio = () => {
       >
         <CustomAppBar
           title="Portfolio"
-          showBack
+         
         />
       </SafeAreaView>
       

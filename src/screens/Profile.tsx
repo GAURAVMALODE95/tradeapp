@@ -13,7 +13,6 @@ const Profile = () => {
       >
         <CustomAppBar
           title="Profile"
-          showBack
         />
       </SafeAreaView>
       <View style={{ height: 60 }} /> 

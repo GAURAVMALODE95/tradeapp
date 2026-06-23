@@ -1,63 +1,86 @@
-import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
-import { FONT_DEFAULT } from '../constants/Constants';
-import { GLOBAL_BORDER_COLOR } from '../constants/Constants';
+import { View, Text, StyleSheet } from 'react-native';
+import { FONT_DEFAULT, GLOBAL_BORDER_COLOR } from '../constants/Constants';
 
-const IndicesCell = () => {
-    return (
-        <View>
-            
-        <View style={styles.indicesCellContainer}>
-        
-            <Text style={styles.indicesCellText}> NIFTY 50</Text>
-            <View
-                style={styles.indicesCellPriceContainer}>
-                <Text style={styles.valueText}> 24,968</Text>
-                <Text style={styles.percentageText}> +190.06 (0.77%)</Text>
-            </View>
-            
+interface Props {
+  name?: string;
+  value?: string;
+  change?: string;
+  isPositive?: boolean;
+}
+
+const IndicesCell = ({
+  name,
+  value,
+  change,
+  isPositive,
+}: Props) => {
+  return (
+    <View style={styles.wrapper}>
+      <View style={styles.container}>
+        <Text style={styles.indexName}>{name}</Text>
+
+        <View style={styles.priceContainer}>
+          <Text style={styles.valueText}>{value}</Text>
+
+          <Text
+            style={[
+              styles.changeText,
+              {
+                color: isPositive ? '#22C55E' : '#EF4444',
+              },
+            ]}>
+            {change}
+          </Text>
         </View>
-        <View style={styles.BorderLine}></View>
-        </View>
-        
-    );
+      </View>
+
+      <View style={styles.divider} />
+    </View>
+  );
 };
 
 export default IndicesCell;
 
 const styles = StyleSheet.create({
-    indicesCellContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        paddingHorizontal: 8,
-        paddingVertical: 8,
-    },
-    indicesCellText: {
-        color: '#FFF',
-        fontSize: 18,
-        fontWeight: '500',
-        fontFamily: FONT_DEFAULT,
-    },
-    indicesCellPriceContainer: {
-        flexDirection: 'column',
-        alignItems: 'flex-end',
-    },
-    valueText: {
-        color: '#FFF',
-        fontSize: 16,
-        fontWeight: '500',
-        fontFamily: FONT_DEFAULT,
-    },
-    percentageText: {
-        color: '#FFF',
-        fontSize: 14,
-        fontWeight: '500',
-        fontFamily: FONT_DEFAULT,
-    },
-    BorderLine: {
-        width: '100%',
-        height: 0.5,
-        paddingHorizontal: 16,
-        backgroundColor: GLOBAL_BORDER_COLOR,
-    },
+  wrapper: {
+    paddingHorizontal: 16,
+  },
+
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 14,
+  },
+
+  indexName: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontFamily: FONT_DEFAULT,
+    fontWeight: '600',
+  },
+
+  priceContainer: {
+    alignItems: 'flex-end',
+  },
+
+  valueText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontFamily: FONT_DEFAULT,
+    fontWeight: '600',
+  },
+
+  changeText: {
+    marginTop: 4,
+    fontSize: 13,
+    fontFamily: FONT_DEFAULT,
+    fontWeight: '500',
+  },
+
+  divider: {
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: GLOBAL_BORDER_COLOR,
+  },
 });

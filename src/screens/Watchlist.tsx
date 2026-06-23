@@ -14,7 +14,7 @@ const Watchlist = () => {
       >
         <CustomAppBar
           title="Watchlist"
-          showBack
+        
         />
       </SafeAreaView>
       

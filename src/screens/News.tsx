@@ -14,7 +14,7 @@ const News = () => {
       >
         <CustomAppBar
           title="News"
-          showBack
+          
         />
       </SafeAreaView>
       
